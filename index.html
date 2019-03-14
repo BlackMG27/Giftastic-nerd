@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Nerdy Giftastic!</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Welcome to Nerdy Giftastic!</h1>
+        <form>
+            <input type="text" id="addButtonText" placeholder="What do you like?">
+            <button id="addButton">Add to the Fandom!</button>
+            <label for="gifNumber">Number of Gifs:</label>
+            <select name="gifNumber" id="gifNumber">
+                <option value="10" id="gif10">10</option>
+                <option value="20" id="gif20">20</option>
+                <option value="30" id="gif30">30</option>
+                <option value="40" id="gif40">40</option>
+                <option value="50" id="gif50">50</option>
+                <option value="60" id="gif60">60</option>
+                <option value="70" id="gif70">70</option>
+                <option value="80" id="gif80">80</option>
+                <option value="90" id="gif90">90</option>
+                <option value="100" id="gif100">100</option>
+            </select>
+        </form>
+        <div id="nerdButtons"></div>
+        <div id="nerdInfo"></div>
+        <div id="nerdGifs"></div>
+        <div id="favorites">
+        </div>
+
+    </div>
+    <script src="./assets/javascript/app.js" type="text/javascript"></script>
+</body>
+
+</html>

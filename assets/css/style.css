@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#nerdInfo {
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+#nerdGifs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    max-width: 800px;
+    grid-gap: 15px;
+    float: left;
+}
+
+.gif {
+    width: 100%;
+    cursor: pointer;
+}
+
+#favorites {
+    float: left;
+    width: 30%;
+}
+
+.favorites-div {
+    padding: 3%;
+}
+
+.favorites-div:first-child {
+    display: none;
+}
