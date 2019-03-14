@@ -129,7 +129,7 @@ function displayInfo() {
     $('#nerdInfo').empty();
     //grabs the button data
     let nerd = $(this).attr('data-name');
-    const infoUrL = `http://www.omdbapi.com/?t=${nerd}&apikey=c3c3f2`;
+    const infoUrL = `https://www.omdbapi.com/?t=${nerd}&apikey=c3c3f2`;
     //sets ajax
     $
         .ajax({url: infoUrL, method: 'GET'})
