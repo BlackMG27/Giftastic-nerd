@@ -73,10 +73,7 @@ function displayGifs() {
     $('#travelInfo').empty();
     //set the ajax
     $
-        .ajax({
-            url: giphyURL,
-            method: 'GET'
-        })
+        .ajax({url: giphyURL, method: 'GET'})
         .then(function (response) {
             //check to see  if it's working
             console.log(response);
@@ -127,46 +124,46 @@ function displayGifs() {
 
 }
 
+//displays the info from the OMDB API
 function displayInfo() {
     $('#nerdInfo').empty();
+    //grabs the button data
     let nerd = $(this).attr('data-name');
     const infoUrL = `http://www.omdbapi.com/?t=${nerd}&apikey=c3c3f2`;
-
+    //sets ajax
     $
-        .ajax({
-            url: infoUrL,
-            method: 'GET'
-        })
+        .ajax({url: infoUrL, method: 'GET'})
         .then(function (response) {
             console.log(response);
+            //set the variables
             var title = response.Title;
             var genre = response.Genre;
             var year = response.Year;
             var rating = response.Rated;
             var released = response.Released;
             var plot = response.Plot;
-
+            //set the renders
             var titleRender = $('<h2>');
             var genreRender = $('<p>');
             var yearRender = $('<p>');
             var ratingRender = $('<p>');
             var releasedRender = $('<p>');
             var plotRender = $('<p>');
-
+            //add the classes
             titleRender.addClass('info-title');
             genreRender.addClass('info-genre');
             yearRender.addClass('info-year');
             ratingRender.addClass('info-rating');
             releasedRender.addClass('info-release');
             plotRender.addClass('info-plot');
-
+            //add the text
             titleRender.text(title);
             genreRender.text(genre);
-            yearRender.text(year);
+            yearRender.text('Year(s) Released: ' + year);
             ratingRender.text(rating);
-            releasedRender.text(released);
+            releasedRender.text('Release Date: ' + released);
             plotRender.text(plot);
-
+            //append to the page
             $('#nerdInfo').append(titleRender, genreRender, yearRender, releasedRender, ratingRender, plotRender);
 
         })
@@ -214,7 +211,9 @@ function addToFavorites() {
         favoriteURL.attr('target', '_blank');
         favoriteURL.addClass('favorite-url');
         favoriteURL.text('Favorite: ' + urls[k]);
+        //append to the div
         favoriteURLDiv.append(favoriteURL);
+        //append to the page
         $('#favorites').append(favoriteURLDiv);
 
     }

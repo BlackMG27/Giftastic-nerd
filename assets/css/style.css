@@ -6,6 +6,55 @@
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 6%;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2%;
+}
+
+#addButtonText {
+    font-size: 1.15rem;
+    padding: 8px;
+}
+
+#addButton {
+    font-size: 1.15rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+
+
+label {
+    font-size: 1.15rem;
+}
+
+#nerdButtons {
+    margin-top: 3%;
+}
+
+.nerd-button {
+    font-size: 1.05rem;
+    padding: 5px 10px;
+    margin: 1%;
+    border-radius: 8px;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.nerd-button:hover,
+#addButton:hover {
+    background-color: #EC7357;
+    color: #FBFFB9;
+    transition: .25s
+}
+
+#gifNumber {
+    font-size: 1.05rem;
 }
 
 #nerdInfo {
@@ -24,6 +73,28 @@
 .gif {
     width: 100%;
     cursor: pointer;
+}
+
+.gif-title {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#nerdInfo {
+    max-width: 900px;
+}
+
+.info-title {
+    font-size: 2rem;
+}
+
+#nerdInfo p {
+    margin-bottom: 10px;
+}
+
+.info-plot {
+    font-size: 1.15rem;
+    line-height: 1.85rem;
 }
 
 #favorites {
